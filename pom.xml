@@ -26,6 +26,12 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
 		<!-- Dev Tools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -101,21 +107,25 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Necessario para o empacotamento WAR -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>
-
 		<!-- Security -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
-		<!-- Firebase Admin -->
-		<!-- <dependency> <groupId>com.google.firebase</groupId> <artifactId>firebase-admin</artifactId> 
-			<version>6.8.0</version> </dependency> -->
+		<!-- Swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<!-- Swagger -->
 
 		<!-- Commons IO -->
 		<dependency>
@@ -124,10 +134,10 @@
 			<version>2.6</version>
 		</dependency>
 
+		<!-- Necessario para o empacotamento WAR -->
 		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 
 	</dependencies>

@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.voluntariado.utils.SenhaUtils;
 
+// Documentação Swagger - http://localhost:8080/swagger-ui.html
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class VoluntariadoApplication extends SpringBootServletInitializer {
 
