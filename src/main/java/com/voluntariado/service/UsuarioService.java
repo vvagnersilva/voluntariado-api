@@ -30,12 +30,6 @@ public class UsuarioService {
 		return usuario;
 	}
 
-	public Usuario getUsuarioByEmailSenha(String email, String senha) {
-		Usuario usuario = rep.findByEmailSenha(email, senha);
-
-		return usuario;
-	}
-
 	public Usuario insert(Usuario Usuario) {
 		return rep.save(Usuario);
 	}

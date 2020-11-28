@@ -7,6 +7,7 @@ import com.voluntariado.entidades.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
+	@Query(value = "SELECT u FROM Usuario u where u.email = :email")
 	Usuario findByEmail(String email);
 
 	@Query(value = "SELECT u FROM Usuario u where u.email = :email and u.senha = :senha")
