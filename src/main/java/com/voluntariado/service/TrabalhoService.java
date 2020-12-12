@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import com.voluntariado.dtos.CertificadoDTO;
+import com.voluntariado.dtos.ICertificado;
 import com.voluntariado.entidades.Equipe;
 import com.voluntariado.entidades.Local;
 import com.voluntariado.entidades.Trabalho;
@@ -96,4 +98,7 @@ public class TrabalhoService {
 		}
 	}
 
+	public ICertificado getCertificado(Long id) {
+		return rep.findByCertificado(id);
+	}
 }

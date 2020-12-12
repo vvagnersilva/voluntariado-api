@@ -1,11 +1,11 @@
 package com.voluntariado;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import com.voluntariado.utils.SenhaUtils;
@@ -17,7 +17,10 @@ public class VoluntariadoApplication extends SpringBootServletInitializer {
 	private static Class<VoluntariadoApplication> applicationClass = VoluntariadoApplication.class;
 
 	public static void main(String[] args) {
-		SpringApplication.run(VoluntariadoApplication.class, args);
+		// SpringApplication.run(VoluntariadoApplication.class, args);
+		SpringApplicationBuilder builder = new SpringApplicationBuilder(VoluntariadoApplication.class);
+		builder.headless(false);
+		ConfigurableApplicationContext context = builder.run(args);
 	}
 
 	@Override

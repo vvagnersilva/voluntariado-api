@@ -24,6 +24,12 @@ public class UsuarioService {
 		return list;
 	}
 
+	public Optional<Usuario> getUsuarioById(Long id) {
+		Optional<Usuario> usuario = rep.findById(id);
+
+		return usuario;
+	}
+
 	public Usuario getUsuarioByEmail(String email) {
 		Usuario usuario = rep.findByEmail(email);
 
